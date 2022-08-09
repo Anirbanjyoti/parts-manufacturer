@@ -7,6 +7,7 @@ import Home from "./Home/Home";
 import Purchase from "./Home/Purchase";
 import Reviews from "./Home/Reviews";
 import Login from "./Login/Login";
+import Footer from "./Sheared/Footer";
 import Navbar from "./Sheared/Navbar";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

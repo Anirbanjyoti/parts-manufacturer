@@ -6,7 +6,7 @@ module.exports = {
       {
         partstheme: {
           primary: "#EAEAEA",
-          secondary: "#29A22E",
+          secondary: "#C7B340",
           accent: "#3A4256",
           neutral: "#3d4451",
           "base-100": "#ffffff",
