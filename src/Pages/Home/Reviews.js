@@ -1,36 +1,15 @@
-import React from "react";
-import people1 from "../../Assets/Images/article-1.jpg";
-import people2 from "../../Assets/Images/article-2.jpg";
-import people3 from "../../Assets/Images/article-3.jpg";
+import React, { useEffect, useState } from "react";
 import Review from "./Review";
 
 const Reviews = () => {
-    const reviews = [
-        {
-          _id: 1,
-          name: "Winson Herry",
-          review:
-            "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-          location: "California",
-          img: people1,
-        },
-        {
-          _id: 2,
-          name: "Winson Herry",
-          review:
-            "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-          location: "California",
-          img: people2,
-        },
-        {
-          _id: 3,
-          name: "Winson Herry",
-          review:
-            "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-          location: "California",
-          img: people3,
-        },
-      ];
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    const url = "http://localhost:5000/reviews";
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
+    
   return (
     <div>
       <div className="text-center">
