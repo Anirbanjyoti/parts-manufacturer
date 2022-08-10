@@ -1,8 +1,17 @@
-import logo from "../Assets/Images/logo.png";
+import logo from "../../Assets/Images/logo.png";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Navbar = () => {
+  const [user] = useAuthState(auth);
+
+  const logout = () => {
+      signOut(auth);
+      // localStorage.removeItem('accessToken');
+  };
   return (
     <div>
       <div className="navbar bg-accent text-white">
@@ -17,9 +26,9 @@ const Navbar = () => {
                 stroke="currentColor"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
@@ -65,9 +74,10 @@ const Navbar = () => {
               <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
+          
+              <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+            
+              
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -98,9 +108,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login" className="btn btn-secondary">
+        {user.displayName}
+         {
+          user ? <button className="btn btn-secondary ml-2" onClick={logout}>Sign Out</button>
+          : <Link to="/login" className="btn btn-secondary">
             Login
           </Link>
+         }
+          
         </div>
       </div>
     </div>

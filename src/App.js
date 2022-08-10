@@ -1,14 +1,15 @@
 // import logo from "./logo.svg";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Business from "./Home/Business";
-import Contact from "./Home/Contact";
-import Home from "./Home/Home";
-import Purchase from "./Home/Purchase";
-import Reviews from "./Home/Reviews";
-import Login from "./Login/Login";
-import Footer from "./Sheared/Footer";
-import Navbar from "./Sheared/Navbar";
+import Business from "./Pages/Home/Business";
+import Contact from "./Pages/Home/Contact";
+import Home from "./Pages/Home/Home";
+import Purchase from "./Pages/Home/Purchase";
+import Reviews from "./Pages/Home/Reviews";
+import Navbar from "./Pages/Sheared/Navbar";
+import Login from "./Pages/Login/Login";
+import Footer from "./Pages/Sheared/Footer";
+import SignUp from "./Pages/Login/SignUp";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer></Footer>
     </div>

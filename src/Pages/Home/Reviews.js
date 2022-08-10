@@ -1,7 +1,7 @@
 import React from "react";
-import people1 from "../Assets/Images/article-1.jpg";
-import people2 from "../Assets/Images/article-2.jpg";
-import people3 from "../Assets/Images/article-3.jpg";
+import people1 from "../../Assets/Images/article-1.jpg";
+import people2 from "../../Assets/Images/article-2.jpg";
+import people3 from "../../Assets/Images/article-3.jpg";
 import Review from "./Review";
 
 const Reviews = () => {
