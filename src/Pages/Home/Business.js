@@ -1,21 +1,28 @@
 import React from "react";
+import BusinessSummery from "./BusinessSummery";
 
 const Business = () => {
+  const clients = 
+  [
+    {
+      'id':1,
+      'countries': 72,
+      'projects': 535,
+      'clients': 273,
+      'feedback':432
+    },
+  ]
   return (
     <div className=" my-24">
       <div className="text-center">
-        <h1 className="text-5xl font-bold   mb-10">Business Summery</h1>
-        <p className="text-2xl  mb-24">We are honored to present you our products. </p>
+        <h1 className="text-5xl font-bold   mb-10">Millions Business Trust US</h1>
+        <p className="text-2xl  mb-24">Try to understand Users Expectation</p>
       </div>
       <div>
         <p className="px-20 justify-center">
-          An executive summary is the overview of your entire business plan and
-          should succinctly highlight the most important parts of the plan. Your
-          executive summary is more than just a general outline of your business
-          plan, though; your business plan’s audience is often busy executives
-          and investors, so the executive summary might be the only part they
-          read. For this reason, you want it to adequately convey all the
-          document’s contents in an engaging and concise way.
+          {
+            clients.map(client=><BusinessSummery key={client.id} client={client}></BusinessSummery>)
+          }
         </p>
       </div>
     </div>
