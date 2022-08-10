@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Tool = ({ tool }) => {
-  const { img, tName, body, desc, price } = tool;
+  const { img, tName, body, desc, price, quantity } = tool;
   return (
   
     <div className="card card-compact bg-base-100 shadow-xl">
@@ -12,6 +12,7 @@ const Tool = ({ tool }) => {
       <p className="text-2xl">{body}</p>
       <p>{desc}</p>
       <span>Price: ${price}</span>
+      <span>Quantity: {quantity} {quantity > 1 ? 'Pcs' :'Pc'}{quantity === 0 && ' /Not Available'}</span>
       <div className="card-actions justify-end">
         <Link to='/purchase'><button className="btn btn-primary">Buy Now</button></Link>
       </div>
