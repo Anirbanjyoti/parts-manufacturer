@@ -11,6 +11,9 @@ import Login from "./Pages/Login/Login";
 import Footer from "./Pages/Sheared/Footer";
 import SignUp from "./Pages/Login/SignUp";
 import RequireAuth from "./Pages/Login/RequireAuth";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import Portfolio from "./Pages/Home/Portfolio";
+import Blog from "./Pages/Home/Blog";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
         <Route path="/business" element={<Business />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/dashboard" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>

@@ -12,6 +12,34 @@ const Navbar = () => {
     signOut(auth);
     // localStorage.removeItem('accessToken');
   };
+  const menuItems = 
+  <>
+    <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li tabIndex="0">
+              <Link to="/purchase">purchase</Link>
+
+            </li>
+            <li>
+              <Link to="/business">Business Summery</Link>
+            </li>
+            <li>
+              <Link to="/reviews">Reviews</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li>
+              <Link to="/blog">BLog</Link>
+            </li>
+            { 
+                user && <li><Link to="/dashboard">Dashboard</Link></li>
+              }
+  </>
   return (
     <div>
       <div className="navbar bg-accent text-white">
@@ -37,43 +65,7 @@ const Navbar = () => {
               tabIndex="0"
               className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52  bg-accent text-white"
             >
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li tabIndex="0">
-                <Link to="/" className="justify-between">
-                  Parent
-                  <svg
-                    className="fill-current"
-                    xmlns=""
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                  </svg>
-                </Link>
-                <ul className="p-2">
-                  <li>
-                    <Link to="/">Submenu 1</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Submenu 2</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link to="/purchase">purchase</Link>
-              </li>
-              <li>
-                <Link to="/business">Business Summery</Link>
-              </li>
-              <li>
-                <Link to="/reviews">Reviews</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact Us</Link>
-              </li>
+              {menuItems}
 
               <li>
                 {user ? (
@@ -92,25 +84,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li tabIndex="0">
-              <Link to="/purchase">purchase</Link>
-              {/* <ul className="p-2">
-          <li><Link to='/'>Submenu 1</Link></li>
-          <li><Link to='/'>Submenu 2</Link></li>
-        </ul> */}
-            </li>
-            <li>
-              <Link to="/business">Business Summery</Link>
-            </li>
-            <li>
-              <Link to="/reviews">Reviews</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Us</Link>
-            </li>
+            {menuItems}
           </ul>
         </div>
         <div className="navbar-end">
