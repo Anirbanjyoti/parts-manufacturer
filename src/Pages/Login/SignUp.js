@@ -35,7 +35,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   let signInError;
   if (user) {
-    navigate("/appointment");
+    navigate("/purchase");
   }
   if (loading || updating) {
     return <Loading></Loading>;

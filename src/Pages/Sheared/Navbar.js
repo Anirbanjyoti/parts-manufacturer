@@ -9,8 +9,8 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
 
   const logout = () => {
-      signOut(auth);
-      // localStorage.removeItem('accessToken');
+    signOut(auth);
+    // localStorage.removeItem('accessToken');
   };
   return (
     <div>
@@ -74,10 +74,16 @@ const Navbar = () => {
               <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
-          
-              <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
-            
-              
+
+              <li>
+                {user ? (
+                  <button className="btn btn-ghost" onClick={logout}>
+                    Sign Out
+                  </button>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
+              </li>
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -108,14 +114,16 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        {user.displayName}
-         {
-          user ? <button className="btn btn-secondary ml-2" onClick={logout}>Sign Out</button>
-          : <Link to="/login" className="btn btn-secondary">
-            Login
-          </Link>
-         }
-          
+          {user?.displayName}
+          {user ? (
+            <button className="btn btn-secondary ml-2" onClick={logout}>
+              Sign Out
+            </button>
+          ) : (
+            <Link to="/login" className="btn btn-secondary">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
