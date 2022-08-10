@@ -35,7 +35,7 @@ const Reviews = () => {
     <div>
       <div className="text-center">
         <h1 className="text-5xl font-bold my-10">Reviews</h1>
-        <p className="text-2xl">We are honored to present you our products. </p>
+        <p className="text-2xl mb-14">We are honored to present you our products. </p>
       </div>
 
   

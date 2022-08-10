@@ -12,10 +12,10 @@ const Tools = () => {
       .then((data) => setTools(data));
   }, []);
   return (
-    <div>
+    <div  className="my-24">
       <div className="text-center">
-        <h1 className="text-5xl font-bold my-10">Auto Tools</h1>
-        <p className="text-2xl">We are honored to present you our products. </p>
+        <h1 className="text-5xl font-bold mb-10">Auto Tools</h1>
+        <p className="text-2xl mb-44">We are honored to present you our products. </p>
       </div>
       <div className="px-12 grid md:grid-cols-3 sm:grid-cols-2 gap-4 my-12">
         {tools.map((tool) => (

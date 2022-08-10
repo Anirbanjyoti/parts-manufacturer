@@ -2,10 +2,10 @@ import React from "react";
 
 const Business = () => {
   return (
-    <div>
+    <div className=" my-24">
       <div className="text-center">
-        <h1 className="text-5xl font-bold my-10">Business Summery</h1>
-        <p className="text-2xl">We are honored to present you our products. </p>
+        <h1 className="text-5xl font-bold   mb-10">Business Summery</h1>
+        <p className="text-2xl  mb-24">We are honored to present you our products. </p>
       </div>
       <div>
         <p className="px-20 justify-center">

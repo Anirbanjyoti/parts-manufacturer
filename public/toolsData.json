@@ -4,41 +4,49 @@
         "tName":"Suspension System",
         "body":"System",
         "desc":"We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price.",
-        "img":"https://i.ibb.co/H45KFjN/banner-1.jpg"
+        "img":"https://i.ibb.co/H45KFjN/banner-1.jpg",
+        "price": 95
+
     },
     {
         "id": 2,
         "tName":"Break",
         "body":"System",
         "desc":"We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price.",
-        "img":"https://i.ibb.co/VYsG0nT/banner-2.jpg"
+        "img":"https://i.ibb.co/VYsG0nT/banner-2.jpg",
+        "price": 89
+
     },
     {   
         "id": 3,
         "tName":"Halo",
-        "body":"System",
+        "body":"HeadLight",
         "desc":"We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price.",
-        "img":"https://i.ibb.co/CzttL3X/banner-3.jpg"
+        "img":"https://i.ibb.co/CzttL3X/banner-3.jpg",
+        "price": 69
     },
     {   
         "id": 4,
         "tName":"Air",
-        "body":"System",
+        "body":"Intakes",
         "desc":"We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price.",
-        "img":"https://i.ibb.co/C7VDFcg/banner-4.jpg"
+        "img":"https://i.ibb.co/C7VDFcg/banner-4.jpg",
+        "price": 90
     },
     {   
         "id": 5,
         "tName":"Turbine",
         "body":"System",
         "desc":"We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price.",
-        "img":"https://i.ibb.co/bWgV9zy/banner-5.jpg"
+        "img":"https://i.ibb.co/bWgV9zy/banner-5.jpg",
+        "price": 49
     },
     {   
         "id": 6,
         "tName":"Exhausted",
         "body":"System",
         "desc":"We are honored to present you our products. We provide auto spare parts and our main goal is to satisfy all of our customers. The secret of our success is that our goods are an unbeaten combination of high quality and fair price.",
-        "img":"https://i.ibb.co/5TwWwyt/banner-6.jpg"
+        "img":"https://i.ibb.co/5TwWwyt/banner-6.jpg",
+        "price": 99
     }
 ]
