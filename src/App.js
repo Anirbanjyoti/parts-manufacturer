@@ -10,6 +10,7 @@ import Navbar from "./Pages/Sheared/Navbar";
 import Login from "./Pages/Login/Login";
 import Footer from "./Pages/Sheared/Footer";
 import SignUp from "./Pages/Login/SignUp";
+import RequireAuth from "./Pages/Login/RequireAuth";
 
 function App() {
   return (
@@ -18,7 +19,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/purchase" element={<Purchase />} />
+        <Route
+          path="/purchase"
+          element={
+            <RequireAuth>
+              <Purchase />
+            </RequireAuth>
+          }
+        />
         <Route path="/business" element={<Business />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
