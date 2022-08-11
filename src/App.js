@@ -17,8 +17,9 @@ import Blog from "./Pages/Home/Blog";
 import MyOrder from "./Pages/Dashboard/User/MyOrder";
 import AddReview from "./Pages/Dashboard/User/AddReview";
 import MyProfile from "./Pages/Dashboard/User/MyProfile";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   return (
@@ -35,14 +36,37 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route
+          path="/purchase/:purchaseId"
+          element={
+            <RequireAuth>
+              <Purchase />
+            </RequireAuth>
+          }
+        />
         <Route path="/business" element={<Business />} />
+        <Route
+          path="/checkout/:purchaseId"
+          element={
+            <RequireAuth>
+              <Checkout />
+            </RequireAuth>
+          }
+        />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
-         
+
           {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
           <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route> */}
