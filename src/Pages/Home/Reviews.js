@@ -19,7 +19,7 @@ const Reviews = () => {
 
   
       <div className="review flex p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {reviews.map((review) => (
+        {reviews.slice(-3).map((review) => (
           <Review key={review._id} review={review}></Review>
         ))}
       </div>

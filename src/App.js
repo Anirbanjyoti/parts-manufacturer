@@ -17,6 +17,8 @@ import Blog from "./Pages/Home/Blog";
 import MyOrder from "./Pages/Dashboard/User/MyOrder";
 import AddReview from "./Pages/Dashboard/User/AddReview";
 import MyProfile from "./Pages/Dashboard/User/MyProfile";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -51,6 +53,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
