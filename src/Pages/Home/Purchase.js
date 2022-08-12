@@ -15,19 +15,26 @@ const Purchase = () => {
   }, [purchaseId]);
   const navigate = useNavigate();
   const handleCheckout = () => {
-    navigate(`/checkout/${purchaseId}`);
+    // navigate(`/checkout/${purchaseId}`);
+    navigate(`/shippingDetails/${purchaseId}`);
   };
   console.log(user);
 
   return (
     <div className="w-1/2 mx-auto my-40">
-      <div className="user-profile mb-20">
+      <div className="user-profile text-xl mb-20">
         <img src={user.photoURL} alt="images" className="rounded-lg"></img>
-        <p>Name: {user.displayName}</p>
-        <p>Email: {user.email}</p>
+        <p>
+          <strong>Name:</strong> {user.displayName}
+        </p>
+        <p>
+          <strong>Email:</strong> {user.email}
+        </p>
       </div>
       {!purchaseId ? (
-        <p className="text-4xl font-bold text-purple-400">You have no Purchase Products !</p>
+        <p className="text-4xl font-bold text-purple-400">
+          You have no Purchase Products !
+        </p>
       ) : (
         <>
           <img src={tools.img} alt="images"></img>
@@ -36,10 +43,10 @@ const Purchase = () => {
             tabindex="0"
             class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box"
           >
-            <div class="collapse-title text-xl font-medium font-bold">
+            <div class="collapse-title text-3xl font-medium font-bold uppercase">
               Click to see Purchase Details
             </div>
-            <div class="collapse-content">
+            <div class="collapse-content text-xl">
               <p>
                 <strong>Product Name:</strong> {tools.tName}
               </p>
@@ -57,28 +64,12 @@ const Purchase = () => {
               </p>
             </div>
           </div>
-          {/* Start Shipping address */}
-          <div
-            tabindex="0"
-            class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box mt-8"
-          >
-            <div class="collapse-title text-xl font-medium font-bold">
-              Shipping Details
-            </div>
-            <div class="collapse-content">
-            <form>
-
-            </form>
-        
-            </div>
-          </div>
-          {/*End Shipping address */}
           <button
             type="button"
             onClick={handleCheckout}
             className="btn btn-primary mt-5 mx-auto text-center bg-secondary"
           >
-            Place Order
+            Proceed To checkOut
           </button>
         </>
       )}

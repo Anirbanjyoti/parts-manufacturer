@@ -20,6 +20,7 @@ import MyProfile from "./Pages/Dashboard/User/MyProfile";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkout from "./Pages/Checkout/Checkout";
+import AddShippingDetails from "./Pages/Dashboard/User/AddShippingDetails";
 
 function App() {
   return (
@@ -44,7 +45,13 @@ function App() {
             </RequireAuth>
           }
         />
+   
         <Route path="/business" element={<Business />} />
+        <Route path="/shippingDetails/:purchaseId" element={
+         <RequireAuth>
+        <AddShippingDetails />
+        </RequireAuth>
+        } />
         <Route
           path="/checkout/:purchaseId"
           element={
