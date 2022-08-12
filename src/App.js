@@ -21,6 +21,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkout from "./Pages/Checkout/Checkout";
 import AddShippingDetails from "./Pages/Dashboard/User/AddShippingDetails";
+import NotFound from "./Pages/Sheared/NotFound";
 
 function App() {
   return (
@@ -45,13 +46,16 @@ function App() {
             </RequireAuth>
           }
         />
-   
+
         <Route path="/business" element={<Business />} />
-        <Route path="/shippingDetails/:purchaseId" element={
-         <RequireAuth>
-        <AddShippingDetails />
-        </RequireAuth>
-        } />
+        <Route
+          path="/shippingDetails/:purchaseId"
+          element={
+            <RequireAuth>
+              <AddShippingDetails />
+            </RequireAuth>
+          }
+        />
         <Route
           path="/checkout/:purchaseId"
           element={
@@ -82,6 +86,7 @@ function App() {
         <Route path="/dashboard" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
       <ToastContainer />
