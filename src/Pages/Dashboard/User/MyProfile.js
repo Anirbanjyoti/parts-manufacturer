@@ -9,8 +9,8 @@ const MyProfile = () => {
     return (
         <div>
             <img src={user?.photoURL} alt='images'></img> 
-            <h1>Profile Name: {user?.displayName}</h1>
-            <h1>Profile Email: {user?.email}</h1>
+            <h1><strong>Profile Name:</strong> {user?.displayName}</h1>
+            <h1><strong>Profile Email:</strong> {user?.email}</h1>
         </div>
     );
 };

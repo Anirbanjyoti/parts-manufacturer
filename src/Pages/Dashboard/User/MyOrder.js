@@ -39,9 +39,6 @@ const MyOrder = () => {
             </>
           ))}
 
-          {/* {shipping?.map((ship) => (
-              <OrderTable key={ship._id} ship={ship}></OrderTable>
-            ))} */}
         </tbody>
       </table>
     </div>

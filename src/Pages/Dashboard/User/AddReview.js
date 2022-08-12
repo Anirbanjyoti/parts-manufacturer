@@ -27,30 +27,30 @@ const AddReview = () => {
   };
     return (
         <div className="add-review">
-        <h1>Please Add Review!</h1>
+        <h1 className="text-4xl">Please Add Review!</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-96 mt-2 grid"
+        className="w-1/2 mt-2 grid"
       >
         
         <input
-          className="mb-2 border-2 p-2"
+          className="mb-4 border-2 rounded-lg p-2"
           placeholder="name"
           {...register("name", { required: true, maxLength: 20 })}
         />
         <input
-          className="mb-2 border-2 p-2"
+          className="mb-4 border-2 rounded-lg p-2"
           placeholder="location"
           type="text"
           {...register("location")}
         />
         <textarea
-          className="mb-2 border-2 p-2"
-          placeholder="review"
+          className="mb-4 border-2 rounded-lg p-4"
+          placeholder="Review"
           {...register("review",{ required: true})}
         />
         <input
-          className="mb-2 border-2 p-2"
+          className="mb-4 border-2 rounded-lg p-2"
           type="text"
           placeholder="Photo Url"
           {...register("img")}
