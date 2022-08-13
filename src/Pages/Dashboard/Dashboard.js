@@ -21,24 +21,29 @@ const Dashboard = () => {
         <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}
           <li>
-            <Link to="/dashboard">{!admin ? 'My Order': 'All Order'}</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/review">Add A Reviews</Link>
-          </li>
-          <li>
             <Link to="/dashboard/profile">My Profile</Link>
           </li>
+          <li>
+            <Link to="/dashboard">
+              {!admin ? "My Order" : "Manage All Order"}
+            </Link>
+          </li>
+          {!admin && (
+            <li>
+              <Link to="/dashboard/review">Add A Reviews</Link>
+            </li>
+          )}
+
           {admin && (
             <>
               <li>
                 <Link to="/dashboard/users">ALl Users</Link>
               </li>
               <li>
-                <Link to="/dashboard/add">Add a Product</Link>
+                <Link to="/dashboard/addProduct">Add a Product</Link>
               </li>
               <li>
-                <Link to="/dashboard/products">Manage products</Link>
+                <Link to="/dashboard/manage">Manage products</Link>
               </li>
             </>
           )}

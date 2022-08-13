@@ -28,6 +28,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import AllOrder from "./Pages/Dashboard/Admin/AllOrder";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
+import AddProduct from "./Pages/Dashboard/Admin/AddProduct";
+import ManageProduct from "./Pages/Dashboard/Admin/ManageProduct";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -97,7 +99,12 @@ function App() {
               </RequireAdmin>
             }
           ></Route>
+        
+        <Route path="addProduct" element={<AddProduct />} />
+        <Route path="manage" element={<ManageProduct />} />
+
         </Route>
+
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
