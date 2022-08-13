@@ -83,7 +83,7 @@ function App() {
           <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route> */}
         </Route>
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/dashboard" element={<Blog />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />

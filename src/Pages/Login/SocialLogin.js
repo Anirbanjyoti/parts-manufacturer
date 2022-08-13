@@ -2,12 +2,13 @@ import React from "react";
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-// import useToken from "../../hooks/useToken";
+import useToken from "../../Hooks/useToken";
 import Loading from "../Sheared/Loading";
 
 const SocialLogin = () => {
     const [signInWithGoogle, gUser, loading, error] = useSignInWithGoogle(auth);
-    // const [token] = useToken(gUser);
+
+    const [token] = useToken(gUser);
     const navigate = useNavigate();
     // Redirection page
       const location = useLocation();
@@ -24,7 +25,7 @@ const SocialLogin = () => {
   if (loading) {
     return <Loading></Loading>
   }
-  if (gUser) {
+  if (token) {
     navigate(from, { replace: true });
   }
 
