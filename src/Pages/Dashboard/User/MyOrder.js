@@ -25,7 +25,7 @@ const MyOrder = () => {
           </tr>
         </thead>
         <tbody>
-          {shipping?.map((ship) => (
+          {/* {shipping?.map((ship) => (
             <>
               <tr>
                 <td>{user.displayName}</td>
@@ -37,7 +37,7 @@ const MyOrder = () => {
                 </td>
               </tr>
             </>
-          ))}
+          ))} */}
 
         </tbody>
       </table>

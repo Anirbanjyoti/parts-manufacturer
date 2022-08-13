@@ -23,8 +23,14 @@ import Checkout from "./Pages/Checkout/Checkout";
 import AddShippingDetails from "./Pages/Dashboard/User/AddShippingDetails";
 import NotFound from "./Pages/Sheared/NotFound";
 import Users from "./Pages/Dashboard/Admin/Users";
+import useAdmin from "./Hooks/useAdmin";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "./firebase.init";
+import AllOrder from "./Pages/Dashboard/Admin/AllOrder";
 
 function App() {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   return (
     <div>
       <Navbar></Navbar>
@@ -75,11 +81,14 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route
+            index
+            element={!admin ? <MyOrder></MyOrder> : <AllOrder></AllOrder>}
+          ></Route>
+
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<Users></Users>}></Route>
-
         </Route>
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
