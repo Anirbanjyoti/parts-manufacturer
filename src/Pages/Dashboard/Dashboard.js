@@ -19,8 +19,8 @@ const Dashboard = () => {
                     <li><Link to="/dashboard">My Order</Link></li>
                     <li><Link to="/dashboard/review">Add A Reviews</Link></li>
                     <li><Link to="/dashboard/profile">My Profile</Link></li>
-                    { !user && <>
-                        <li><Link to="/dashboard/AdminProfile">My Profile</Link></li>
+                    { user && <>
+                        <li><Link to="/dashboard/users">ALl Users</Link></li>
                         <li><Link to="/dashboard/add">Add a Product</Link></li>
                         <li><Link to="/dashboard/products">Manage products</Link></li>
                     </>}

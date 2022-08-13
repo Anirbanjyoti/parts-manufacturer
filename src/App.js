@@ -22,6 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Checkout from "./Pages/Checkout/Checkout";
 import AddShippingDetails from "./Pages/Dashboard/User/AddShippingDetails";
 import NotFound from "./Pages/Sheared/NotFound";
+import Users from "./Pages/Dashboard/Admin/Users";
 
 function App() {
   return (
@@ -77,10 +78,8 @@ function App() {
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
 
-          {/* <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
-          <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
-          <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route> */}
         </Route>
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
