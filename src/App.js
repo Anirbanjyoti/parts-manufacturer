@@ -27,6 +27,7 @@ import useAdmin from "./Hooks/useAdmin";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import AllOrder from "./Pages/Dashboard/Admin/AllOrder";
+import RequireAdmin from "./Pages/Login/RequireAdmin";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -88,7 +89,14 @@ function App() {
 
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="users" element={<Users></Users>}></Route>
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <Users></Users>
+              </RequireAdmin>
+            }
+          ></Route>
         </Route>
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
