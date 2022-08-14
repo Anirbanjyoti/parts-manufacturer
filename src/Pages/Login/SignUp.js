@@ -45,7 +45,7 @@ const SignUp = () => {
   }
   return (
     <div>
-      <div className="grid justify-center mt-24">
+      <div className="grid justify-center my-20">
         <h1 className="text-center text-4xl font-bold">SignUp</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* Start Name Field */}

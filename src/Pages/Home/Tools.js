@@ -18,7 +18,7 @@ const Tools = () => {
         <p className="text-2xl mb-40">We are honored to present you our products. </p>
       </div>
       <div className="px-12 grid md:grid-cols-3 sm:grid-cols-2 gap-4 my-12">
-        {tools.map((tool) => (
+        {tools.slice(0).reverse().map((tool) => (
           <Tool key={tool.id} tool={tool}></Tool>
         ))}
       </div>

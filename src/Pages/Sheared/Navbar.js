@@ -37,7 +37,7 @@ const Navbar = () => {
               <Link to="/blog">BLog</Link>
             </li>
             { 
-                user && <li><Link to="/dashboard">Dashboard</Link></li>
+                user && <li><Link to="/dashboard" className="border-2">Dashboard</Link></li>
               }
   </>
   return (

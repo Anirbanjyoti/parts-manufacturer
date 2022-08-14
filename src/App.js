@@ -30,6 +30,7 @@ import AllOrder from "./Pages/Dashboard/Admin/AllOrder";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
 import AddProduct from "./Pages/Dashboard/Admin/AddProduct";
 import ManageProduct from "./Pages/Dashboard/Admin/ManageProduct";
+import AddBlog from "./Pages/Dashboard/AddBlog";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -102,6 +103,7 @@ function App() {
         
         <Route path="addProduct" element={<AddProduct />} />
         <Route path="manage" element={<ManageProduct />} />
+        <Route path="addBlog" element={<AddBlog />} />
 
         </Route>
 
