@@ -4,6 +4,15 @@ import slide2 from "../../Assets/Images/slide-2.jpg";
 import slide3 from "../../Assets/Images/slide-3.jpg";
 
 const Carousel = () => {
+  // useEffect(() => {
+  //   startSlider();
+  // }, []);
+
+  // const startSlider = () => {
+  //   setInterval(() => {
+  //     handleOnNextClick();
+  //   }, 3000);
+  // };
   return (
     <div>
       <div className="carousel w-full">

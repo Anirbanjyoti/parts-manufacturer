@@ -19,7 +19,7 @@ const Business = () => {
         <p className="text-2xl  mb-24">Try to understand Users Expectation</p>
       </div>
       <div>
-        <p className="px-20 justify-center">
+        <p className="px-20 justify-center bg-primary py-10">
           {
             clients.map(client=><BusinessSummery key={client.id} client={client}></BusinessSummery>)
           }

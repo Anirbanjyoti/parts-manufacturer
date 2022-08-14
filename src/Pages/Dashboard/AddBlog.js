@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddBlog = () => {
-    const { register, handleSubmit, acknowledged } = useForm();
+    const { register, handleSubmit, acknowledged, reset } = useForm();
     const onSubmit = (data) => {
       console.log(data);
       const url = `http://localhost:5000/post`;
@@ -20,6 +20,7 @@ const AddBlog = () => {
         .then((result) => {
           console.log(result);
          toast("Successfully added Your Post");
+         reset();
           if(acknowledged){
             Navigate('/home');
           }
@@ -30,7 +31,7 @@ const AddBlog = () => {
           <h1 className="text-4xl">Please Add Your Post!</h1>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-1/2 mt-2 grid"
+          className="w-full mt-2 grid"
         >
           
           <input

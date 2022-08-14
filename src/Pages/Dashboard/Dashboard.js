@@ -10,9 +10,9 @@ const Dashboard = () => {
   return (
     <div class="drawer drawer-mobile">
       <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content">
-        <h2 className="text-5xl font-bold text-purple-500 mb-4">
-          Welcome to your Dashboard
+      <div class="drawer-content mx-auto">
+        <h2 className="text-5xl font-bold text-purple-500 mb-4 bg-accent p-5 my-5 rounded-lg">
+          Welcome To Your Dashboard
         </h2>
         <Outlet></Outlet>
       </div>

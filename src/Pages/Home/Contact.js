@@ -5,15 +5,16 @@ const Contact = () => {
   return (
     <section
       style={{
-        // background: `url(${bgBlue})`,
-        background:"#988406",
-        backgroundSize: "contain",
+        background: `url('https://i.ibb.co/JvBXFf1/auto-mechanic-s-tools-white-background-flat-lay-space-text-auto-mechanic-s-tools-white-wooden-backgr.jpg')`,
+        // background:"#988406",
+        // background:"#EBEBEB",
+        backgroundSize: "cover",
         padding:"100px 0"
       }}
     >
-      <div className="text-center">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="text-white text-2xl">Stay Connected with Us</p>
+      <div className="text-center bg-no-repeat">
+        <h1 className="text-4xl font-bold uppercase">Contact Us</h1>
+        <p className="text-white text-secondary text-2xl">Stay Connected with Us</p>
       </div>
       <div className="w-60 md:w-80 lg:w-96 m-auto text-center mt-2">
         <form>
@@ -34,7 +35,7 @@ const Contact = () => {
             placeholder="Your Message"
           ></textarea>
           <br></br>
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn-primary bg-secondary" type="submit">
             Submit
           </button>
         </form>

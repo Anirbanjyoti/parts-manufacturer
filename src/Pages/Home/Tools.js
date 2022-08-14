@@ -15,9 +15,9 @@ const Tools = () => {
     <div  className="my-24">
       <div className="text-center">
         <h1 className="text-5xl font-bold mb-10">Auto Tools</h1>
-        <p className="text-2xl mb-40">We are honored to present you our products. </p>
+        <p className="text-2xl mb-24">We are honored to present you our products. </p>
       </div>
-      <div className="px-12 grid md:grid-cols-3 sm:grid-cols-2 gap-4 my-12">
+      <div className="px-12 grid md:grid-cols-3 sm:grid-cols-2 gap-4 my-12 bg-accent py-14">
         {tools.slice(0).reverse().map((tool) => (
           <Tool key={tool.id} tool={tool}></Tool>
         ))}

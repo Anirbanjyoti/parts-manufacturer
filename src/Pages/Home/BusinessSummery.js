@@ -7,22 +7,22 @@ const BusinessSummery = ({ client }) => {
   
   return (
     <div className="grid md:grid-cols-4 text-center">
-      <div class="card card-compact bg-base-100 text-5xl">
+      <div class="card card-compact bg-base-100 text-5xl p-10 m-2">
         <FontAwesomeIcon icon={faFlag} />
         <div class="card-body">
           <h2 class="text-5xl font-bold">{countries}</h2>
           <p>countries</p>
         </div>
       </div>
-      <div class="card card-compact bg-base-100 text-5xl">
+      <div class="card card-compact bg-base-100 text-5xl p-10 m-2">
         <FontAwesomeIcon icon={faDiagramProject} />
         <div class="card-body">
           <h2 class="text-5xl font-bold">{projects}+</h2>
           <p>projects</p>
         </div>
       </div>
-      <div class="card card-compact bg-base-100 text-5xl">
 
+      <div class="card card-compact bg-base-100 text-5xl p-10 m-2">
       <FontAwesomeIcon icon={faUsers} />
         <div class="card-body">
           <h2 class="text-5xl font-bold">{clients}+</h2>
@@ -30,7 +30,7 @@ const BusinessSummery = ({ client }) => {
 
         </div>
       </div>
-      <div class="card card-compact bg-base-100 text-5xl">
+      <div class="card card-compact bg-base-100 text-5xl p-10 m-2">
         
       <FontAwesomeIcon icon={faSmile} />
         <div class="card-body text-center">
